@@ -1,0 +1,35 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --progress",
+    "build": "webpack --progress",
+    "re-build": "rimraf dist && webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "typings install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.17.0",
+    "node-sass": "^3.7.0",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "tslint": "^3.10.2",
+    "tslint-loader": "^2.1.4",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^2.2.4"
+  }
+}
