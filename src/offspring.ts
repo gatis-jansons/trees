@@ -59,10 +59,10 @@ export default class Offspring {
     buttonHtml(treeid) {
         var parent = this.getParent();
             var ret = '';
-        ret += '<img src="img/edit.gif" class="pull-right edit" onClick="' + treeid + '.editNode(\'' + this.id + '\')">';
-        ret += '<img src="img/add.gif" class="pull-right add" onClick="' + treeid + '.addNode(\'' + this.id + '\')">';
+        ret += '<span class="pull-right edit" onClick="' + treeid + '.editNode(\'' + this.id + '\')"></span>';
+        ret += '<span class="pull-right add" onClick="' + treeid + '.addNode(\'' + this.id + '\')"></span>';
         if (parent != null) {
-            ret += '<img src="img/delete.gif" class="pull-right delete" onClick="' + treeid + '.deleteNode(\'' + this.id + '\')">';
+            ret += '<span class="pull-right delete" onClick="' + treeid + '.deleteNode(\'' + this.id + '\')"></span>';
         }
         return ret;
     }

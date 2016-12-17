@@ -3,13 +3,25 @@ li {
   padding: 10px;
   list-style: none;
 }
+.edit {
+	background: url(edit.gif) no-repeat;
+}
+
+.add {
+	background: url(add.gif) no-repeat;
+}
+
+.delete {
+	background: url(delete.gif) no-repeat;
+}
+
+
 .edit, .add, .delete {
+  background-position: center;
+  width: 19px;
+  height: 19px;
   cursor: pointer;
   cursor: hand;
-  padding-left: 10px;
-  padding-right: 3px;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 .record {
   padding: 3px;

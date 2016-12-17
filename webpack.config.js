@@ -8,7 +8,7 @@ module.exports = {
         vendor: "./src/vendor.ts"
     },
     output: {
-        path: "./dist",
+        path: "dist",
         filename: "[name].js"
     },
     module: {
@@ -24,7 +24,12 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loader: "style!css?sourceMap!sass?sourceMap"
-            }
+            },
+ 		{
+ 		    test: /\.(png|jpg|gif)$/,
+ 		    loader: 'url-loader?limit=10000'
+ 		}
+
         ],
         preLoaders: [
             {
