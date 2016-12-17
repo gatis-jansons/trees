@@ -21,6 +21,17 @@ export default class Tree  {
         localStorage.setItem(this.id, a);
     }
 
+    restoreLocal(elemid, alg) {
+        var a = localStorage.getItem(elemid);
+        console.log(a);
+        var ret = new Tree(elemid, alg);
+        ret.load(a);
+        var selector = '#' + elemid;
+        var treeItem = $(selector);
+        treeItem.html(ret.renderHtml());
+        return ret;
+    }
+
     toJsonWithClass() {
         return JSON.stringify(this.trunk, function (name, value) {
             if (value instanceof Dictionary) {

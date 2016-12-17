@@ -22,13 +22,13 @@
         <div class="col-sm-6" style="background-color:lavender;">
             <h2>Recursive</h2>
             <input type="button" class="btn btn-info btn-lg" onclick="mytree.saveLocal()" value="Save">
-            <input type="button" class="btn btn-info btn-lg" onclick="mytree = restoreLocal('mytree', 'recursive')" value="Restore">
+            <input type="button" class="btn btn-info btn-lg" onclick="mytree = mytree.restoreLocal('mytree', 'recursive')" value="Restore">
             <div id="mytree"></div>
         </div>
         <div class="col-sm-6" style="background-color:lavenderblush;">
             <h2>Iterative</h2>
             <input type="button" class="btn btn-info btn-lg" onclick="itertree.saveLocal()" value="Save">
-            <input type="button" class="btn btn-info btn-lg" onclick="itertree = restoreLocal('itertree', 'iterative')" value="Restore">
+            <input type="button" class="btn btn-info btn-lg" onclick="itertree = itertree.restoreLocal('itertree', 'iterative')" value="Restore">
             <div id="itertree" ></div>
         </div>
     </div>
@@ -37,21 +37,8 @@
 
 
 <script>
-    function restoreLocal(elemid, alg) {
-        var a = localStorage.getItem(elemid);
-        console.log(a);
-        var ret = new Tree(elemid, alg);
-        ret.load(a);
-        var selector = '#' + elemid;
-        var treeItem = $(selector);
-        treeItem.html(ret.renderHtml());
-        return ret;
-    }
-
     var mytree;
     var itertree;
-
-
 </script>
 
 
