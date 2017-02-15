@@ -5,7 +5,7 @@ Features jQuery for DOM, LocalStorage for persistence, TypeScript for object ori
 Object Tree
 ===========
 
-For demonstration open tree.html in a browser.
+Deployed at [http://labas-programmas.rhcloud.com/](http://labas-programmas.rhcloud.com/)
 
 * The code renders a tree of objects and allows to edit it.
 
